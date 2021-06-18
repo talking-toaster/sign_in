@@ -15,11 +15,11 @@ jobs:
           python-version: '3.7'
 
       - name: Install dependencies
-        run: 
+        run: |
           python -m pip install --upgrade pip
           pip install requests
       
       - name: Run
-        run:
+        run: |
           cd py
           python sign_in.py
