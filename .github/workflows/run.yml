@@ -1,6 +1,9 @@
 name: sin_in
 
 on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '30 8 * * *'
   workflow_dispatch:
 
 jobs:
@@ -20,6 +23,10 @@ jobs:
           pip install requests
       
       - name: Run
+        env:
+          host:${{ secrets.host }}
+          user:${{ secrets.user }}
+          password:${{ secrets.password }}
         run: |
           cd py
           python sign_in.py
