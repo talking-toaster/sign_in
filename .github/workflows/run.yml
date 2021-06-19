@@ -24,9 +24,9 @@ jobs:
       
       - name: Run
         env:
-          host:${{ secrets.host }}
-          user:${{ secrets.user }}
-          password:${{ secrets.password }}
+          host: ${{ secrets.host }}
+          user: ${{ secrets.user }}
+          password: ${{ secrets.password }}
         run: |
           cd py
           python sign_in.py
