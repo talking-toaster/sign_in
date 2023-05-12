@@ -210,6 +210,7 @@ def main():
     u = os.getenv('user')
     p = os.getenv('password')
     for i in range(len(u.split(','))):
+        print(host)
         user = u.split(',')[i]
         password = p.split(',')[i]
         printy(user)
